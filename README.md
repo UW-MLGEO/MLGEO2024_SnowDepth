@@ -1,6 +1,9 @@
 # ESS 469 A Au 24: Machine Learning In Geosciences Final Project
 It should be noted that the basis of this project is forked from a [repo](https://github.com/geo-smart/deep-snow) developed by Quinn Brencher (gbrench@uw.edu) and Eric Gagliano (egagli@uw.edu) that documents some of their incredible contributions to snow research. More can be found [below](#deep-snow).
 
+### Motivation
+Understanding snow depth is crucial in hydrological risk assessment, water resource management, climate change modeling, and more. Remote sensing technologies such as light detection and ranging (LiDAR), synthetic aperture radar (SAR), and optical imagery allow for measurements of snow depth, land cover, and topography across a spatial scale unachievable by traditional manual measurements and models. Current machine learning models that use remote sensing data to measure snow depth are making great strides, but struggle in terms of accuracy at a large spatial scale. The incorporation of spatially-sparse, highly-precise snow depth stations into these models to improve this accuracy is a challenge many snow scientists are facing today. We hope to develop methodology that efficiently encodes point and raster data into machine learning architectures, using Quinn and Eric's "deep-snow" data and models (CNNs).
+
 ### Installation
 Download and install Miniconda Set up Mamba
 ```
@@ -8,7 +11,7 @@ $ conda install mamba -n base -c conda-forge
 ```
 Clone the repo and set up the environment
 ```
-$ git clone https://github.com/geo-smart/deep-snow.git
+$ git clone [https://github.com/geo-smart/deep-snow.git](https://github.com/Jack-Hayes/mlgeo-2024-deep-snow.git)
 $ cd ./deep-snow
 $ mamba env create -f environment.yml
 $ conda activate deep-snow
@@ -17,6 +20,16 @@ Install the package locally
 ```
 $ pip install -e .
 ```
+
+### Data
+- Sentinel-1 RTC backscatter data (snow on and snow off)
+- Sentinel-2 imagery (snow on)
+- Fractional forest cover
+- COP30 digital elevation model
+- Airborne Snow Observatory (ASO) lidar snow depth maps
+- SNOTEL snowpack monitoring stations
+
+-----
 
 # deep-snow
 ### Machine learning models for Sentinel-1 SAR backscatter snow depth retrieval
