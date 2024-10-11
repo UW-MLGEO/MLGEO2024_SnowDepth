@@ -22,13 +22,15 @@ $ pip install -e .
 ```
 
 ### Data
+*The below is copied from Quinn and Eric's repo
 - Sentinel-1 RTC backscatter data (snow on and snow off)
 - Sentinel-2 imagery (snow on)
 - Fractional forest cover
 - COP30 digital elevation model
 - Airborne Snow Observatory (ASO) lidar snow depth maps
 - SNOTEL snowpack monitoring stations
-
+  
+Snow-on Sentinel-1 and 2 data were collected nearby in time to corresponding ASO acquistions. All products were reprojected to the appropriate UTM zone and resampled to a matching 50 m grid. Products were divided up spatially into training, testing, and validation tiles and subset to produce a machine-learning ready dataset. Our training dataset includes ~37,000 image stacks, each of which includes all of the above listed inputs.
 -----
 
 # deep-snow
