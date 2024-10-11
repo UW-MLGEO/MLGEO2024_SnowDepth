@@ -1,3 +1,23 @@
+# ESS 469 A Au 24: Machine Learning In Geosciences Final Project
+It should be noted that the basis of this project is forked from a [repo](https://github.com/geo-smart/deep-snow) developed by Quinn Brencher (gbrench@uw.edu) and Eric Gagliano (egagli@uw.edu) that documents some of their incredible contributions to snow research. More can be found [below](#deep-snow).
+
+### Installation
+Download and install Miniconda Set up Mamba
+```
+$ conda install mamba -n base -c conda-forge
+```
+Clone the repo and set up the environment
+```
+$ git clone https://github.com/geo-smart/deep-snow.git
+$ cd ./deep-snow
+$ mamba env create -f environment.yml
+$ conda activate deep-snow
+```
+Install the package locally
+```
+$ pip install -e .
+```
+
 # deep-snow
 ### Machine learning models for Sentinel-1 SAR backscatter snow depth retrieval
 
