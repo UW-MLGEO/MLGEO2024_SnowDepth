@@ -11,7 +11,7 @@ $ conda install mamba -n base -c conda-forge
 ```
 Clone the repo and set up the environment
 ```
-$ git clone [https://github.com/geo-smart/deep-snow.git](https://github.com/Jack-Hayes/mlgeo-2024-deep-snow.git)
+$ git clone https://github.com/Jack-Hayes/mlgeo-2024-deep-snow.git
 $ cd ./deep-snow
 $ mamba env create -f environment.yml
 $ conda activate deep-snow
