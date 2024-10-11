@@ -34,6 +34,8 @@ Snow-on Sentinel-1 and 2 data were collected nearby in time to corresponding ASO
 
 -----
 
+* Below is the readme of the repo this was forked from
+
 # deep-snow
 ### Machine learning models for Sentinel-1 SAR backscatter snow depth retrieval
 
