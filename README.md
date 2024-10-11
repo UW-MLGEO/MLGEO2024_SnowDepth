@@ -32,9 +32,15 @@ $ pip install -e .
 
 Snow-on Sentinel-1 and 2 data were collected nearby in time to corresponding ASO acquistions. All products were reprojected to the appropriate UTM zone and resampled to a matching 50 m grid. Products were divided up spatially into training, testing, and validation tiles and subset to produce a machine-learning ready dataset. Our training dataset includes ~37,000 image stacks, each of which includes all of the above listed inputs.  
 
+### Computing Environment
+The work for this project is conducted on NASA's [CryoCloud](https://book.cryointhecloud.com/intro.html)
+
+"The CryoCloud is a JupyterHub built for NASA Cryosphere communities in partnership with the International Interactive Computing Collaboration 2i2c. Launched in October 2022, the CryoCloud cloud-computing projects aim to establish a curated interactive computing platform and develop Cryosphere community expertise in open-soured and cloud-based platforms. The intention is to transition a NASA community into the cloud while discovering the needs and overall best practices for making this transition."
+
 -----
 
-* Below is the readme of the repo this was forked from
+> [!IMPORTANT]
+> Below is the readme of the repo this was forked from
 
 # deep-snow
 ### Machine learning models for Sentinel-1 SAR backscatter snow depth retrieval
