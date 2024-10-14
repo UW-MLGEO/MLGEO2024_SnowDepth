@@ -6,6 +6,7 @@ Understanding snow depth is crucial in hydrological risk assessment, water resou
 
 ### Installation
 **CryoCloud:**
+
 Login to [CryoCloud](https://book.cryointhecloud.com/intro.html) JupyterHub
 ```
 $ git clone https://github.com/Jack-Hayes/mlgeo-2024-deep-snow.git
