@@ -11,6 +11,8 @@ Login to [CryoCloud](https://book.cryointhecloud.com/intro.html) JupyterHub
 ```
 $ git clone https://github.com/Jack-Hayes/mlgeo-2024-deep-snow.git
 $ cd ./mlgeo-2024-deep-snow
+$ conda env create -f environment.yml
+$ conda activate deep-snow
 $ pip install -e .
 ```
 
