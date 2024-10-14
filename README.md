@@ -5,18 +5,6 @@ It should be noted that the basis of this project is forked from a [repo](https:
 Understanding snow depth is crucial in hydrological risk assessment, water resource management, climate change modeling, and more. Remote sensing technologies such as light detection and ranging (LiDAR), synthetic aperture radar (SAR), and optical imagery allow for measurements of snow depth, land cover, and topography across a spatial scale unachievable by traditional manual measurements and models. Current machine learning models that use remote sensing data to measure snow depth are making great strides, but struggle in terms of accuracy at a large spatial scale. The incorporation of spatially-sparse, highly-precise snow depth stations into these models to improve this accuracy is a challenge many snow scientists are facing today. We hope to develop methodology that efficiently encodes point and raster data into machine learning architectures, using Quinn and Eric's "deep-snow" data and models (CNNs).
 
 ### Installation
-**CryoCloud:**
-
-Login to [CryoCloud](https://book.cryointhecloud.com/intro.html) JupyterHub
-```
-$ git clone https://github.com/Jack-Hayes/mlgeo-2024-deep-snow.git
-$ cd ./mlgeo-2024-deep-snow
-$ conda env create -f environment.yml
-$ conda activate deep-snow
-$ pip install -e .
-```
-
-**Local:**
 ```
 $ conda install mamba -n base -c conda-forge
 ```
@@ -42,11 +30,6 @@ $ pip install -e .
 - SNOTEL snowpack monitoring stations
 
 Snow-on Sentinel-1 and 2 data were collected nearby in time to corresponding ASO acquistions. All products were reprojected to the appropriate UTM zone and resampled to a matching 50 m grid. Products were divided up spatially into training, testing, and validation tiles and subset to produce a machine-learning ready dataset. Our training dataset includes ~37,000 image stacks, each of which includes all of the above listed inputs.  
-
-### Computing Environment
-The work for this project is conducted on NASA's [CryoCloud](https://book.cryointhecloud.com/intro.html)
-
-"The CryoCloud is a JupyterHub built for NASA Cryosphere communities in partnership with the International Interactive Computing Collaboration 2i2c. Launched in October 2022, the CryoCloud cloud-computing projects aim to establish a curated interactive computing platform and develop Cryosphere community expertise in open-soured and cloud-based platforms. The intention is to transition a NASA community into the cloud while discovering the needs and overall best practices for making this transition."
 
 -----
 
