@@ -1,7 +1,7 @@
 # ESS 469 A Au 24: Machine Learning In Geosciences Final Project
 It should be noted that the basis of this project is forked from a [repo](https://github.com/geo-smart/deep-snow) developed by Quinn Brencher (gbrench@uw.edu) and Eric Gagliano (egagli@uw.edu) that documents some of their incredible contributions to snow research. More can be found [below](#deep-snow).
 
-[Go to AI-Ready Dataset Assignment](#MLGeo-AI-Ready-DS)
+## [Go to AI-Ready Dataset Assignment](#MLGeo-AI-Ready-DS)
 
 ### Motivation
 Understanding snow depth is crucial in hydrological risk assessment, water resource management, climate change modeling, and more. Remote sensing technologies such as light detection and ranging (LiDAR), synthetic aperture radar (SAR), and optical imagery allow for measurements of snow depth, land cover, and topography across a spatial scale unachievable by traditional manual measurements and models. Current machine learning models that use remote sensing data to measure snow depth are making great strides, but struggle in terms of accuracy at a large spatial scale. The incorporation of spatially-sparse, highly-precise snow depth stations into these models to improve this accuracy is a challenge many snow scientists are facing today. We hope to develop methodology that efficiently encodes point and raster data into machine learning architectures, using Quinn and Eric's "deep-snow" data and models (CNNs).
@@ -34,7 +34,7 @@ $ pip install -e .
 Snow-on Sentinel-1 and 2 data were collected nearby in time to corresponding ASO acquistions. All products were reprojected to the appropriate UTM zone and resampled to a matching 50 m grid. Products were divided up spatially into training, testing, and validation tiles and subset to produce a machine-learning ready dataset. Our training dataset includes ~37,000 image stacks, each of which includes all of the above listed inputs.  
 
 ### MLGeo-AI-Ready-DS
-It should be noted that we unfortunately cannot share our cleaned ASO LiDAR snow depth data due to ASO's data sharing policy. This means we cannot share our testing and validation data unfortunately, but below is the data we used and relevant links, notebooks on how we accessed and downloaded relevant data, a notebook on how we made the training data AI-ready, and visualizations of some of our data.
+It should be noted that we unfortunately cannot share our cleaned ASO LiDAR snow depth data due to ASO's data sharing policy. This means we cannot share our testing and validation data unfortunately, but below is the data we used and relevant links, notebooks on how we accessed and downloaded relevant data, a notebook on how we made the training data AI-ready, and visualizations of some of our data. Furthermore, we have too much data to host on our repo so the notebooks below (particularly [notebooks/visualizations/ai-ready_viz.ipynb](notebooks/visualizations/ai-ready_viz.ipynb) will showcase the data).
 The AI-ready dataset is split into tiles corresponding to aso LiDAR flight extents. Each tile (32x32km) will have multiple subdivided rasters of size 128x128 pixels where each pixel is 50m. Each of these pixels will contain data listed from the various remote sensing sources below. Tiles do not all have the same amount of rasters within due to missing data. In total, there are 451 testing rasters, 3366 training rasters, and 589 validation rasters. There are 16 testing tiles, 125 training tiles, and 16 validation tiles.
 - data
   - [Airborne Snow Observatory (ASO) lidar snow depth maps](https://nsidc.org/data/aso_3m_sd/versions/1)      
@@ -99,7 +99,7 @@ The AI-ready dataset is split into tiles corresponding to aso LiDAR flight exten
 - AI-ready data preprocessing
   -  The code for making all of this data AI-ready (aligneing all remote sensing products and decomposing into tiles) can be found in [notebooks/dataset_prep/subset.ipynb](https://github.com/Jack-Hayes/mlgeo-2024-deep-snow/blob/main/notebooks/dataset_prep/subset.ipynb) where the tile boundary polygons were generated in [QGIS](https://www.qgis.org/) using the "Create grid" tool.
 - Example visualizations
-  - 
+  - See [notebooks/visualizations/ai-ready_viz.ipynb](notebooks/visualizations/ai-ready_viz.ipynb) for data visualizations
 
 -----
 
