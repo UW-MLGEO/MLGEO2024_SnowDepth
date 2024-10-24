@@ -101,7 +101,10 @@ The AI-ready dataset is split into tiles corresponding to ASO LiDAR flight exten
 - Example visualizations
   - See [notebooks/visualizations/ai-ready_viz.ipynb](notebooks/visualizations/ai-ready_viz.ipynb) for data visualizations
   - The SNOTEL snow depth station data we want is easily queryable as seen at [notebooks/dataset_prep/snotel_exploration.ipynb](notebooks/dataset_prep/snotel_exploration.ipynb) (note that the interactive maps aren't viewable on the repo so see [this notebook](https://notebooksharing.space/view/0a79b23e82c6e156fddbcb0ae7e7727016099edce27b87b94757317c59b9d910#displayOptions=) instead). This data is not technically AI-ready, but a main goal of this project is to how best make this data AI-ready and how that ties in with encoding the point data most effectively.
-
+- Exploratory Data Analysis (EDA)
+  - 
+- Dimensionality Discussion and Reduction
+  - 
 -----
 
 > [!IMPORTANT]
