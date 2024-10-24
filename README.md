@@ -100,6 +100,7 @@ The AI-ready dataset is split into tiles corresponding to ASO LiDAR flight exten
   -  The code for making all of this data AI-ready (aligneing all remote sensing products and decomposing into tiles) can be found in [notebooks/dataset_prep/subset.ipynb](https://github.com/Jack-Hayes/mlgeo-2024-deep-snow/blob/main/notebooks/dataset_prep/subset.ipynb) where the tile boundary polygons were generated in [QGIS](https://www.qgis.org/) using the "Create grid" tool.
 - Example visualizations
   - See [notebooks/visualizations/ai-ready_viz.ipynb](notebooks/visualizations/ai-ready_viz.ipynb) for data visualizations
+  - The SNOTEL snow depth station data we want is easily queryable as seen at [notebooks/dataset_prep/snotel_exploration.ipynb](notebooks/dataset_prep/snotel_exploration.ipynb) (note that the interactive maps aren't viewable on the repo so see [this notebook](https://notebooksharing.space/view/0a79b23e82c6e156fddbcb0ae7e7727016099edce27b87b94757317c59b9d910#displayOptions=) instead). This data is not technically AI-ready, but a main goal of this project is to how best make this data AI-ready and how that ties in with encoding the point data most effectively.
 
 -----
 
