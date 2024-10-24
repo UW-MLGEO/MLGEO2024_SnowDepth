@@ -1,6 +1,8 @@
 # ESS 469 A Au 24: Machine Learning In Geosciences Final Project
 It should be noted that the basis of this project is forked from a [repo](https://github.com/geo-smart/deep-snow) developed by Quinn Brencher (gbrench@uw.edu) and Eric Gagliano (egagli@uw.edu) that documents some of their incredible contributions to snow research. More can be found [below](#deep-snow).
 
+[Go to AI-Ready Dataset Assignment](#MLGeo-AI-Ready_DS)
+
 ### Motivation
 Understanding snow depth is crucial in hydrological risk assessment, water resource management, climate change modeling, and more. Remote sensing technologies such as light detection and ranging (LiDAR), synthetic aperture radar (SAR), and optical imagery allow for measurements of snow depth, land cover, and topography across a spatial scale unachievable by traditional manual measurements and models. Current machine learning models that use remote sensing data to measure snow depth are making great strides, but struggle in terms of accuracy at a large spatial scale. The incorporation of spatially-sparse, highly-precise snow depth stations into these models to improve this accuracy is a challenge many snow scientists are facing today. We hope to develop methodology that efficiently encodes point and raster data into machine learning architectures, using Quinn and Eric's "deep-snow" data and models (CNNs).
 
@@ -30,6 +32,17 @@ $ pip install -e .
 - SNOTEL snowpack monitoring stations
 
 Snow-on Sentinel-1 and 2 data were collected nearby in time to corresponding ASO acquistions. All products were reprojected to the appropriate UTM zone and resampled to a matching 50 m grid. Products were divided up spatially into training, testing, and validation tiles and subset to produce a machine-learning ready dataset. Our training dataset includes ~37,000 image stacks, each of which includes all of the above listed inputs.  
+
+### MLGeo-AI-Ready_DS
+It should be noted that we unfortunately cannot share our cleaned ASO LiDAR snow depth data due to ASO's data sharing policy. This means we cannot share our testing and validation data unfortunately, but below is the data we used and relevant links, notebooks on how we accessed and preprocessed the training data, a notebook on how we made the training data AI-ready, and visualizations of some of our data.
+- data
+  - 
+- training data accessing
+  - 
+- AI-ready data preprocessing
+  -  
+- Example visualizations
+  - 
 
 -----
 
