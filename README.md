@@ -35,6 +35,7 @@ Snow-on Sentinel-1 and 2 data were collected nearby in time to corresponding ASO
 
 ### MLGeo-AI-Ready-DS
 It should be noted that we unfortunately cannot share our cleaned ASO LiDAR snow depth data due to ASO's data sharing policy. This means we cannot share our testing and validation data unfortunately, but below is the data we used and relevant links, notebooks on how we accessed and downloaded relevant data, a notebook on how we made the training data AI-ready, and visualizations of some of our data.
+The AI-ready dataset is split into tiles corresponding to aso LiDAR flight extents. Each tile (32x32km) will have multiple subdivided rasters of size 128x128 pixels where each pixel is 50m. Each of these pixels will contain data listed from the various remote sensing sources below. Tiles do not all have the same amount of rasters within due to missing data. In total, there are 451 testing rasters, 3366 training rasters, and 589 validation rasters. There are 16 testing tiles, 125 training tiles, and 16 validation tiles.
 - data
   - [Airborne Snow Observatory (ASO) lidar snow depth maps](https://nsidc.org/data/aso_3m_sd/versions/1)      
     - ASO lidar snow depth (target dataset)   
@@ -94,9 +95,9 @@ It should be noted that we unfortunately cannot share our cleaned ASO LiDAR snow
     - day of water year (dowy)
 
 - Data downloads
-  - Code for how we accessed and downloaded the data above (excluding the cleaned ASO LiDAR data as described in the preliminary writing of this section) can be seen in the [dataset prep notebooks](notebooks/dataset_prep)
+  - Code for how we accessed and downloaded the data above (excluding the cleaned ASO LiDAR data as described in the preliminary writing of this section) can be seen in the [notebooks/dataset_prep](notebooks/dataset_prep) notebooks
 - AI-ready data preprocessing
-  -  The code for making all of this data AI-ready (aligneing all remote sensing products and decomposing into tiles) can be found in [this notebook](https://github.com/Jack-Hayes/mlgeo-2024-deep-snow/blob/main/notebooks/dataset_prep/subset.ipynb) where the tile boundary polygons were generated in [QGIS](https://www.qgis.org/) using the "Create grid" tool.
+  -  The code for making all of this data AI-ready (aligneing all remote sensing products and decomposing into tiles) can be found in [notebooks/dataset_prep/subset.ipynb](https://github.com/Jack-Hayes/mlgeo-2024-deep-snow/blob/main/notebooks/dataset_prep/subset.ipynb) where the tile boundary polygons were generated in [QGIS](https://www.qgis.org/) using the "Create grid" tool.
 - Example visualizations
   - 
 
