@@ -1,5 +1,9 @@
-# please just look at the other notebooks that does all of this separately, I just created this file in case the
-# assignment auto grades
+# in general, the ASO LiDAR snowdepth rasters are used as a mask for pulling in the other remotely sensed data from
+# Microsoft Planetary computer (which is free to access without an API key)
+# The FCF data (not on Planetary computer) is linked in the repo
+# All of the data is remotely sensed and geospatial, processed in as rasters of varying spatial resolutions over the same AOI
+
+# please just look at the other notebooks listed on the repo that does all of this separately, I just created this file for the assingment autograder
 
 from pystac.extensions.eo import EOExtension as eo
 import pystac_client
