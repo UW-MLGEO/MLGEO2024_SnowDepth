@@ -34,7 +34,7 @@ $ pip install -e .
 Snow-on Sentinel-1 and 2 data were collected nearby in time to corresponding ASO acquistions. All products were reprojected to the appropriate UTM zone and resampled to a matching 50 m grid. Products were divided up spatially into training, testing, and validation tiles and subset to produce a machine-learning ready dataset. Our training dataset includes ~37,000 image stacks, each of which includes all of the above listed inputs.  
 
 ### MLGeo-AI-Ready-DS
-It should be noted that we unfortunately cannot share our cleaned ASO LiDAR snow depth data due to ASO's data sharing policy. Below is the data  we used and relevant links, notebooks on how we accessed and downloaded relevant data (excluding ASO LiDAR), a notebook on how we made the training data AI-ready, and visualizations of some of our data. Furthermore, we have too much data to host on our repo so the notebooks below (particularly [notebooks/visualizations/ai-ready_viz.ipynb](notebooks/visualizations/ai-ready_viz.ipynb) will showcase the data).
+It should be noted that we unfortunately cannot share our cleaned ASO LiDAR snow depth data due to ASO's data sharing policy. The data downloading notebooks do rely on this data so this is not entirely replicable (though accessing the other data sources through the API endpoints with any geometry is still possible, you just won't have the 'ground truth' data to test against). Below is the data  we used and relevant links, notebooks on how we accessed and downloaded relevant data (excluding ASO LiDAR), a notebook on how we made the training data AI-ready, and visualizations of some of our data. Furthermore, we have too much data to host on our repo so the notebooks below (particularly [notebooks/visualizations/ai-ready_viz.ipynb](notebooks/visualizations/ai-ready_viz.ipynb) will showcase the data).
 The AI-ready dataset is split into tiles corresponding to ASO LiDAR flight extents. Each tile (32x32km) will have multiple subdivided rasters of size 128x128 pixels where each pixel is 50m. Each of these pixels will contain data listed from the various remote sensing sources below. Tiles do not all have the same amount of rasters within due to missing data. In total, there are 451 testing rasters, 3366 training rasters, and 589 validation rasters. There are 16 testing tiles, 125 training tiles, and 16 validation tiles. The data covers the Sierra Nevada, Rocky Mountain, and Olympic mountain ranges from 2016-2023.
 - data
   - [Airborne Snow Observatory (ASO) lidar snow depth maps](https://nsidc.org/data/aso_3m_sd/versions/1)      
@@ -100,7 +100,11 @@ The AI-ready dataset is split into tiles corresponding to ASO LiDAR flight exten
   -  The code for making all of this data AI-ready (aligneing all remote sensing products and decomposing into tiles) can be found in [notebooks/dataset_prep/subset.ipynb](https://github.com/Jack-Hayes/mlgeo-2024-deep-snow/blob/main/notebooks/dataset_prep/subset.ipynb) where the tile boundary polygons were generated in [QGIS](https://www.qgis.org/) using the "Create grid" tool.
 - Example visualizations
   - See [notebooks/visualizations/ai-ready_viz.ipynb](notebooks/visualizations/ai-ready_viz.ipynb) for data visualizations
-
+  - The SNOTEL snow depth station data we want is easily queryable as seen at [notebooks/dataset_prep/snotel_exploration.ipynb](notebooks/dataset_prep/snotel_exploration.ipynb) (note that the interactive maps aren't viewable on the repo so see [this notebook](https://notebooksharing.space/view/0a79b23e82c6e156fddbcb0ae7e7727016099edce27b87b94757317c59b9d910#displayOptions=) instead). This data is not technically AI-ready, but a main goal of this project is to how best make this data AI-ready and how that ties in with encoding the point data most effectively.
+- Exploratory Data Analysis (EDA)
+  - 
+- Dimensionality Discussion and Reduction
+  - 
 -----
 
 > [!IMPORTANT]
