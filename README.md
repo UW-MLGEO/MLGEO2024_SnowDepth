@@ -101,15 +101,13 @@ The AI-ready dataset is split into tiles corresponding to ASO LiDAR flight exten
 - Organizing Data into AI-Ready Format
   - [notebooks/Prepare_AI_Ready_Data.ipynb](notebooks/Prepare_AI_Ready_Data.ipynb)
   - note that the subdirectories in [data/ai_ready/](data/ai_ready/) are empty due to the ASO data sharing policies described above. the data are stored in .nc files so all of the training, testing, and validation files contain this sensitive data
+  - See [notebooks/visualizations/ai-ready_viz.ipynb](notebooks/visualizations/ai-ready_viz.ipynb) for data visualizations which will serve as our [data/ai_ready/](data/ai_ready/) replacement
   - Note the the tile boundary polygons were generated in [QGIS](https://www.qgis.org/) using the "Create grid" tool.
-  - See [notebooks/visualizations/ai-ready_viz.ipynb](notebooks/visualizations/ai-ready_viz.ipynb) for data visualizations
   - The SNOTEL snow depth station data we want is easily queryable as seen at [notebooks/dataset_prep/snotel_exploration.ipynb](notebooks/dataset_prep/snotel_exploration.ipynb) (note that the interactive maps aren't viewable on the repo so see [this notebook](https://notebooksharing.space/view/0a79b23e82c6e156fddbcb0ae7e7727016099edce27b87b94757317c59b9d910#displayOptions=) instead). This data is not technically AI-ready, but a main goal of this project is to how best make this data AI-ready and how that ties in with encoding the point data most effectively.
 - Exploratory Data Analysis (EDA)
   - [notebooks/EDA.ipynb](notebooks/EDA.ipynb)
-  - struggled with the due date due to the sheer size of the data
 - Dimensionality Discussion and Reduction
   - [notebooks/Dimensionality_Reduction.ipynb](notebooks/Dimensionality_Reduction.ipynb)
-  - struggled with the due date due to the sheer size of the data
 -----
 
 > [!IMPORTANT]
