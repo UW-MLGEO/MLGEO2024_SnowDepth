@@ -1,1 +1,0 @@
-yen yi fun fact
